@@ -8,7 +8,7 @@ const taskRoutes = require('./routes/taskRoutes');
 
 dotenv.config();
 const app = express();
-const allowedOrigins = ['https://taskmaster-9558.onrender.com'];
+const allowedOrigins = ['https://taskmaster-9558.onrender.com', 'http://localhost'];
 
 // Middleware
 app.use(bodyParser.json());
