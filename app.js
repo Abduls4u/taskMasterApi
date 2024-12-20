@@ -14,7 +14,12 @@ const app = express();
 
 // Middleware
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+  origin: allowedOrigins,
+  methods: 'GET,POST,PUT,DELETE',
+  credentials: true, 
+}));
+
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
 
